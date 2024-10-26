@@ -12,6 +12,9 @@ function stringCalculator(s) {
       } else {
         if (s[i] == ",") {
           let no = Number(s[i + 1]);
+          if(no<0){
+            return `negative numbers not allowed ${no}.`;
+          }
           addition = addition + no;
         }
       }
